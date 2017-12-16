@@ -1,0 +1,13 @@
+Start as master or slave
+
+All changes are given a serial number, so if a slave is notified of a change it's not expecting it can request the gap.
+
+Master remembers the last change given to each slave, so  easy to spin up a new slave which syncs all files.
+
+Slaves are IDed not by IP, but by an ENV variable, which will be INSTANCE ID in prod but makes for easy dev.
+
+
+Master:
+- Watches audit log file file changes
+- Exposes api to accept notification of new/changed/deleted files
+- /api/changes/
