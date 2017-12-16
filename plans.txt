@@ -11,3 +11,13 @@ Master:
 - Watches audit log file file changes
 - Exposes api to accept notification of new/changed/deleted files
 - /api/changes/
+
+
+
+
+Or....
+master just broadcasts a new change number when changes occur, packing up add/change/deletes into numbered changes
+
+when slaves see a change has happened they ask for all changes since the last change number they knew about.
+
+this should enabled new slaves to spin up (asking for changes since change 0), and if a slave misses a change they'll catch up eventually.
