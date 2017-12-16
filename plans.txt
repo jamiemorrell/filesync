@@ -18,6 +18,16 @@ Master:
 Or....
 master just broadcasts a new change number when changes occur, packing up add/change/deletes into numbered changes
 
-when slaves see a change has happened they ask for all changes since the last change number they knew about.
+when slaves see a change has happened greater than the last change number they knew about, they request changes since then
 
 this should enabled new slaves to spin up (asking for changes since change 0), and if a slave misses a change they'll catch up eventually.
+
+GET master/api/changes/:since
+
+POST master/api/file/:path
+
+PUT master/api/file/:path
+
+DELETE master/api/file/:path
+
+Maybe a slave getting a write passes it on to the master.
