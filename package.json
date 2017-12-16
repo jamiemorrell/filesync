@@ -1,0 +1,23 @@
+{
+  "name": "master",
+  "version": "1.0.0",
+  "description": "Sync file changes from a master node to slave nodes",
+  "main": "master.js",
+  "dependencies": {
+    "udp-discovery": "0.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamiemorrell/filesync.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamiemorrell/filesync/issues"
+  },
+  "homepage": "https://github.com/jamiemorrell/filesync#readme"
+}
